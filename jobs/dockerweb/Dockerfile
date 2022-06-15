@@ -14,10 +14,10 @@ RUN apt-get update && apt-get install -y \
         && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
         && apt-get install vim -y
 
-RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz \
-        && tar xzvf docker-17.04.0-ce.tgz \
-        && mv docker/docker /usr/local/bin \
-        && rm -r docker docker-17.04.0-ce.tgz
+# RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz \
+#         && tar xzvf docker-17.04.0-ce.tgz \
+#         && mv docker/docker /usr/local/bin \
+#         && rm -r docker docker-17.04.0-ce.tgz
 
 COPY  . /var/www/html/
 WORKDIR /var/www/html/
